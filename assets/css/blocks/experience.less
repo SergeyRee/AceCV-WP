@@ -1,0 +1,56 @@
+// main: ../style.less
+
+/* EXPERIENCE */
+.experience {
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        padding: 2rem 1rem;
+        max-width: 25%;
+
+        @media (max-width: 938px) {
+            max-width: 50%;
+        }
+
+        @media (max-width: 482px) {
+            max-width: 100%;
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__icon {
+        height: 2rem;
+        width: auto;
+    }
+
+
+}
+
+/* /EXPERIENCE */
+
+/* PARTNERS */
+.partners {
+    background: #f1f1f1;
+
+    &__wrapper {
+        padding-top: 2rem;
+        height: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__item {
+        max-width: 20%;
+        height: 80%;
+    }
+
+    &__icon {
+        height: 80%;
+    }
+}
+
+/* /PARTNERS */

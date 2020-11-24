@@ -1,0 +1,55 @@
+// main: ../style.less
+
+/* CONTACTS */
+.contacts {
+    padding-top: 12rem ;
+    background-color: #f3f3f3;
+
+    @media (max-width: 862px) {
+        padding-top: 2rem ;
+    }
+
+    &__title {
+        max-width: 650px;
+        margin-left: 2rem;
+    }
+
+    &__wrapper {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    &__item {
+        padding: 2rem;
+        width: calc(100%/4);
+        
+        p:hover {
+            color: @tuerkis;
+            transition: color .2s;
+        }
+
+        @media (max-width: 862px) {
+            padding: 0.5rem 0.5rem 0.5rem 2rem ;
+            h5 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 603px) {
+            min-width: 50%;
+            h5 {
+                font-size: 18px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+/* /CONTACTS */

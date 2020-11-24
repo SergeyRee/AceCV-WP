@@ -1,0 +1,120 @@
+// main: ../style.less
+
+/* HOME */
+.home {
+    padding-top: 2rem;
+    margin-bottom: 3rem;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__info {
+        margin: auto 0;
+        width: 16rem;
+
+        @media (max-width: 618px) {
+            margin: 2rem 0rem;
+        }
+
+        .name {
+            font-size: 5rem;
+            line-height: 0.95;
+            margin: 0;
+
+            @media (max-width: 618px) {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            font-size: 1.5rem;
+            color: @second;
+
+            @media (max-width: 618px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+
+        @media (max-width: 618px) {
+            display: block;
+        }
+
+        .social__item {
+            position: relative;
+            height: 25px;
+            width: 25px;
+            margin-right: 25px;
+
+            @media (max-width: 618px) {
+                margin-top: 22px;
+            }
+        }
+
+        .social__item:last-child {
+            height: 20px;
+            width: 20px;
+            margin-right: 0px;
+        }
+
+        .social__item:hover {}
+
+        .social__item::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            z-index: -1;
+            height: 40px;
+            width: 40px;
+            margin-right: 33px;
+            background-color: #fff;
+            border-radius: 20px;
+        }
+
+        .social__item:hover::before {
+            background-color: @primary;
+        }
+    }
+
+    img {
+        //margin: 3rem 0 0 0;
+        //padding: 3rem 0 0 0;
+        overflow: hidden;
+
+        @media (max-width: 686px) {
+            width: 230px;
+        }
+
+        @media (max-width: 618px) {
+            position: absolute;
+            bottom: 28%;
+            right: 8%;
+            z-index: -5;
+        }
+
+        @media (max-width: 415px) {
+            width: 180px;
+        }
+    }
+
+    svg path {
+        fill: inherit;
+        stroke: inherit;
+        stroke-width: inherit;
+    }
+
+    .social__icon:hover {
+        fill: #fff;
+    }
+}
+
+/* /HOME */

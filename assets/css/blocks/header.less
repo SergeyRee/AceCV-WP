@@ -1,0 +1,200 @@
+// main: ../style.less
+
+/* HEADER */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: rgb(255, 255, 255);
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        list-style: none;
+
+        @media (max-width: 850px) {
+            display: none;
+        }
+
+        &__item {
+            padding-right: 2.5rem;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
+        &__link {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: @primary;
+            text-decoration: none;
+            transition: .2s linear;
+
+            &::before {
+                content: '';
+                display: none;
+                position: absolute;
+                top: 10px;
+                left: -15px;
+                width: 10px;
+                height: 3px;
+                background-color: @tuerkis;
+            }
+
+            &:hover::before {
+                color: @tuerkis;
+                transition: .2s linear;
+                display: block;
+            }
+        }
+
+        &__link-active {
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: @primary;
+            text-decoration: none;
+            transition: .2s linear;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: -15px;
+                width: 10px;
+                height: 3px;
+                background-color: @tuerkis;
+                display: block;
+            }
+
+            &:hover::before {
+                color: @tuerkis;
+                transition: .2s linear;
+                display: block;
+            }
+        }
+    }
+
+    .mobile-nav-overlay {
+        position: fixed;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .mobile-nav-active {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 3.5rem;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.822);
+
+        .nav {
+            display: inline-block;
+
+            &__item_mobile {
+                margin-bottom: 1rem;
+            }
+
+            &__link {
+                color: #fff;
+            }
+
+            &__link-active {
+                color: @tuerkis;
+            }
+        }
+    }
+
+    .nav__item__mobile {
+        padding-bottom: 1rem;
+    }
+}
+
+.no-scroll {
+    padding: 0.9em 0;
+    transition: padding .2s;
+}
+
+.scroll {
+    padding: 0.4rem 0;
+    transition: padding .2s;
+
+    @media (max-width: 846px) {
+        padding: 0.8rem 0;
+    }
+}
+
+/* /HEADER */
+
+/* Burger Icon*/
+
+header button {
+    margin-right: -10px;
+    background: transparent;
+}
+
+header button:hover {
+    background: transparent;
+}
+
+.menu-toggle {
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    display: none;
+
+    @media (max-width: 850px) {
+        display: flex;
+    }
+}
+
+.menu-icon {
+    position: absolute;
+    height: 5px;
+    width: 30px;
+    background-color: @primary;
+}
+
+.menu-icon::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 0;
+
+    height: 5px;
+    width: 30px;
+    background-color: @primary;
+}
+
+.menu-icon::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+
+    height: 5px;
+    width: 30px;
+    background-color: @primary;
+}
+
+/* /Burger Icon*/
